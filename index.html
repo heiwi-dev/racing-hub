@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Racing Hub — портфолио мультикатегорийного автоспорта</title>
+  <meta name="description" content="Racing Hub — интерактивный хаб автоспорта: Формула-1, GT3, WEC и WRC. Записи, разборы и хайлайты в одном портфолио." />
+  <meta name="theme-color" content="#07080a" id="themeColor" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Racing Hub" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="Racing Hub — портфолио мультикатегорийного автоспорта" />
+  <meta property="og:description" content="Racing Hub — интерактивный хаб автоспорта: Формула-1, GT3, WEC и WRC. Записи, разборы и хайлайты в одном портфолио." />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var saved = localStorage.getItem('rh-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=7" />
+</head>
+<body data-page="hub">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-fx__grid"></div>
+    <div class="bg-fx__glow bg-fx__glow--a"></div>
+    <div class="bg-fx__glow bg-fx__glow--b"></div>
+  </div>
+
+  <header class="site-header" data-header data-nav-open="false">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="index.html" aria-label="Racing Hub — на главную">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3.6 19.5 9 4.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+            <path d="M10.2 19.5 15.6 4.5" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" />
+            <path d="M16.8 19.5 19.6 12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity=".45" />
+          </svg>
+        </span>
+        <span class="brand__text">Racing <em>Hub</em></span>
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Основная навигация">
+        <a href="#series">Серии</a>
+        <a href="#about">Манифест</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" type="button" data-theme-btn aria-label="Тема: переключить" title="Пит-стоп режим: день / ночь">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 14.6A8.6 8.6 0 1 1 9.4 4a6.9 6.9 0 0 0 10.6 10.6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8" />
+            <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <span class="icon-btn__label">Тема</span>
+        </button>
+
+        <button class="icon-btn menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="siteNav" aria-label="Открыть меню">
+          <span class="menu-btn__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero__atmos" aria-hidden="true">
+        <span class="hero__glow hero__glow--red"></span>
+        <span class="hero__glow hero__glow--amber"></span>
+        <span class="hero__glow hero__glow--cyan"></span>
+        <span class="hero__asphalt"></span>
+      </div>
+
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>мультикатегорийный хаб автоспорта</p>
+          <h1 class="hero__title" id="heroTitle">Четыре серии.<br /><em>Один хаб.</em></h1>
+          <p class="hero__lead">
+            Формула-1, GT3, гиперкары WEC и ралли — в одном интерфейсе.
+            Обзоры гонок, технические разборы и хайлайты без лишних кликов.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#series">
+              Выбрать серию
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h14M11 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </a>
+            <a class="btn btn--ghost" href="#about">Манифест</a>
+          </div>
+        </div>
+
+        <div class="hero__stage">
+          <div class="hero__stage-head">
+            <p class="hero__stage-label">Гараж · сезон ’26</p>
+            <p class="hero__stage-note">Четыре машины, ради которых всё это</p>
+          </div>
+
+          <div class="hero__cars">
+            <figure class="hero__cars-frame">
+              <img
+                class="hero__cars-img hero__cars-img--off"
+                src="cars-off.webp"
+                width="1024"
+                height="434"
+                alt="Четыре гоночные машины в ряд: Formula 1, GT3, WEC и WRC"
+                fetchpriority="high"
+              />
+              <img
+                class="hero__cars-img hero__cars-img--on"
+                src="cars-on.webp"
+                width="1024"
+                height="339"
+                alt=""
+                aria-hidden="true"
+              />
+            </figure>
+          </div>
+
+          <nav class="hero__nav" aria-label="Быстрый переход к сериям">
+            <a class="hero__nav-chip" href="series.html?s=f1" style="--chip-accent: #e10600"><span>Formula 1</span></a>
+            <a class="hero__nav-chip" href="series.html?s=gt3" style="--chip-accent: #ffb400"><span>GT3</span></a>
+            <a class="hero__nav-chip" href="series.html?s=wec" style="--chip-accent: #00d2ff"><span>WEC</span></a>
+            <a class="hero__nav-chip" href="series.html?s=wrc" style="--chip-accent: #a78bfa"><span>WRC</span></a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="series">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">каталог</p>
+            <h2 class="section-title">Выбери свою серию</h2>
+          </div>
+          <p class="section-head__note">
+            Четыре дисциплины — от городского кольца до ночного Ле-Мана.
+            Внутри каждой серии: фильтр по сезонам, типу контента и разбор записи.
+          </p>
+        </div>
+        <div class="series-grid" id="seriesGrid"></div>
+        <noscript>
+          <p style="color:#99a2b0;margin-top:20px">Для отображения каталога включите JavaScript — карточки серий собираются из js/data.js.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="about">
+      <div class="wrap manifesto reveal">
+        <p class="eyebrow">манифест</p>
+        <h2 class="manifesto__title">Скорость без шума</h2>
+        <p class="manifesto__statement">Четыре серии. Один хаб. <em>Ноль лишнего.</em></p>
+        <p class="manifesto__text">
+          Racing Hub собирает Формулу-1, GT3, WEC и ралли в одном спокойном
+          пространстве — только машины, трассы и истории, которые их окружают.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="contacts">
+      <div class="wrap contact-card reveal">
+        <div>
+          <p class="eyebrow">контакты</p>
+          <h2 class="section-title">Обсудим проект?</h2>
+          <p>
+            Открыт к работе над лендингами, промо-страницами и интерфейсами
+            для спорта и медиа. Напишите — отвечу в течение дня.
+          </p>
+        </div>
+        <div class="contact-card__actions">
+          <a class="btn btn--primary" href="mailto:hello@racinghub.dev">hello@racinghub.dev</a>
+          <div class="contact-links">
+            <a href="#" data-demo>Telegram</a>
+            <a href="#" data-demo>GitHub</a>
+            <a href="#" data-demo>Behance</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <a class="brand brand--sm" href="index.html">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3.6 19.5 9 4.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+            <path d="M10.2 19.5 15.6 4.5" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" />
+            <path d="M16.8 19.5 19.6 12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity=".45" />
+          </svg>
+        </span>
+        <span class="brand__text">Racing <em>Hub</em></span>
+      </a>
+      <p class="site-footer__note">Демо-контент для портфолио: гонки, результаты и цитаты вымышлены.</p>
+      <p>© <span data-year>2026</span> Racing Hub</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js?v=3"></script>
+</body>
+</html>

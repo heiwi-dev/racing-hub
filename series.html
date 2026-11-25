@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Серия — Racing Hub</title>
+  <meta name="description" content="Энциклопедия гоночной серии: история, технический регламент, формат этапа, система очков, культовые трассы и заводские команды." />
+  <meta name="theme-color" content="#07080a" id="themeColor" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Racing Hub" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="Серия — Racing Hub" />
+  <meta property="og:description" content="Энциклопедия гоночной серии: история, технический регламент, формат этапа, система очков, культовые трассы и заводские команды." />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var saved = localStorage.getItem('rh-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=7" />
+</head>
+<body data-page="series">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-fx__grid"></div>
+    <div class="bg-fx__glow bg-fx__glow--a"></div>
+    <div class="bg-fx__glow bg-fx__glow--b"></div>
+  </div>
+
+  <header class="site-header" data-header data-nav-open="false">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="index.html" aria-label="Racing Hub — на главную">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3.6 19.5 9 4.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+            <path d="M10.2 19.5 15.6 4.5" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" />
+            <path d="M16.8 19.5 19.6 12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity=".45" />
+          </svg>
+        </span>
+        <span class="brand__text">Racing <em>Hub</em></span>
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Основная навигация">
+        <a href="index.html#series">Серии</a>
+        <a href="index.html#about">Манифест</a>
+        <a href="index.html#contacts">Контакты</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" type="button" data-theme-btn aria-label="Тема: переключить" title="Пит-стоп режим: день / ночь">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 14.6A8.6 8.6 0 1 1 9.4 4a6.9 6.9 0 0 0 10.6 10.6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8" />
+            <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <span class="icon-btn__label">Тема</span>
+        </button>
+
+        <button class="icon-btn menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="siteNav" aria-label="Открыть меню">
+          <span class="menu-btn__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="enc-hero" aria-labelledby="seriesTitle">
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Хлебные крошки">
+          <a href="index.html">Все серии</a>
+          <span aria-hidden="true">/</span>
+          <span id="crumbName">Загрузка…</span>
+        </nav>
+
+        <div class="enc-hero__grid">
+          <div class="enc-hero__copy">
+            <p class="eyebrow">
+              <span class="eyebrow__dot" aria-hidden="true"></span>
+              <span id="seriesCategory">Серия</span>
+            </p>
+            <h1 class="enc-hero__title" id="seriesTitle">Загрузка…</h1>
+            <p class="enc-hero__lead" id="seriesLead"></p>
+            <dl class="enc-metrics" id="seriesMetrics"></dl>
+            <div class="enc-hero__actions" id="seriesActions"></div>
+          </div>
+
+          <div class="enc-model" id="modelSlot" role="group" aria-label="Интерактивная 3D-модель болида"></div>
+        </div>
+
+        <nav class="enc-series-nav" id="seriesNav" aria-label="Выбор серии"></nav>
+      </div>
+    </section>
+
+    <div class="wrap enc-stack" id="seriesContent"></div>
+
+    <noscript>
+      <div class="wrap">
+        <p class="enc-noscript">Энциклопедия серии собирается из js/data.js — для отображения включите JavaScript.</p>
+      </div>
+    </noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <a class="brand brand--sm" href="index.html">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3.6 19.5 9 4.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+            <path d="M10.2 19.5 15.6 4.5" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" />
+            <path d="M16.8 19.5 19.6 12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity=".45" />
+          </svg>
+        </span>
+        <span class="brand__text">Racing <em>Hub</em></span>
+      </a>
+      <p class="site-footer__note">Демо-контент для портфолио: гонки, результаты и цитаты вымышлены.</p>
+      <p>© <span data-year>2026</span> Racing Hub</p>
+    </div>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer@4.4.0/dist/model-viewer.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js?v=3"></script>
+  <script src="js/series.js?v=2"></script>
+</body>
+</html>
